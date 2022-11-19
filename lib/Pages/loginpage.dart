@@ -9,8 +9,12 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+
   @override
   Widget build(BuildContext context) {
+    double width=MediaQuery.of(context).size.width;
+    double height=MediaQuery.of(context).size.height;
+
     return Scaffold(
       body: Center(
         child: Container(
@@ -23,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
                   radius: 40.0,
                   child: Icon(Icons.person ,size: 40.0),
                 ),
-                SizedBox(height: 5.0,),
+                SizedBox(height: height*0.05,),
                 Text("Login",style: TextStyle(
                   fontSize: 40.00
                 )),
