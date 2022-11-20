@@ -12,38 +12,126 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Container(
       child: Scaffold(
-      body: Column(
-        children: [
-          Container(
-          ),
-        ],
-      ),
+        appBar: AppBar(
+          title: Text("Doctor Appointment System "),
+        ),
         drawer: Drawer(
-          elevation:0.5,
-          child: Column(
-            children: [
-              UserAccountsDrawerHeader(
-                  accountName: Text("ABC"),
-                  accountEmail: Text("abc@gmail.com"),
-                currentAccountPicture: CircleAvatar(
-                  backgroundColor: Colors.green,
-                  child: Text("DA" , style: TextStyle(fontSize: 40.0 )
-                    ,),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                UserAccountsDrawerHeader(
+                  accountName: Text("View Profile",
+                      style: TextStyle(
+                        fontSize: 20.0,
+                      ),
+                    ),
+                    accountEmail: Text("Edit Profile",
+                      style: TextStyle(
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  currentAccountPicture: CircleAvatar(
+                    backgroundColor: Colors.white ,
+                    child: Icon(Icons.person_add_alt),
+                  ),
                 ),
-              ),
-              ListTile(
-                title: Text("1"),
-              ),
-              ListTile(
-                title: Text("2"),
-              ),
-              ListTile(
-                title: Text("3"),
-              ),
-            ],
+                ListTile(
+                    title: Text("Edit Profile",
+                      style: TextStyle(
+                        fontSize: 20.0,
+                      ),
+                    ),
+                    leading: Icon(Icons.person,
+                      color: Colors.blue,
+                    ),
+                  ),
+                ListTile(
+                  title: Text("Appointment",
+                    style: TextStyle(
+                      fontSize: 20.0,
+                    ),
+                  ),
+                  leading: Icon(Icons.calendar_month,
+                    color: Colors.blue,
+                  ),
+                ),
+                ListTile(
+                  title: Text("Report",
+                    style: TextStyle(
+                      fontSize: 20.0,
+                    ),
+                  ),
+                  leading: Icon(Icons.monitor_heart,
+                    color: Colors.blue,
+                  ),
+                ),
+                ListTile(
+                  title: Text("Prescripation",
+                    style: TextStyle(
+                      fontSize: 20.0,
+                    ),
+                  ),
+                  leading: Icon(Icons.topic_outlined,
+                    color: Colors.blue,
+                  ),
+                ),
+                ListTile(
+                  title: Text("Laboratories",
+                    style: TextStyle(
+                      fontSize: 20.0,
+                    ),
+                  ),
+                  leading: Icon(Icons.biotech_outlined,
+                    color: Colors.blue,
+                  ),
+                ),
+                ListTile(
+                  title: Text("Medical",
+                    style: TextStyle(
+                      fontSize: 20.0,
+                    ),
+                  ),
+                  leading: Icon(Icons.local_hospital,
+                    color: Colors.blue,
+                  ),
+                ),
+                ListTile(
+                  title: Text("Activity",
+                    style: TextStyle(
+                      fontSize: 20.0,
+                    ),
+                  ),
+                  leading: Icon(Icons.fitness_center,
+                    color: Colors.blue,
+                  ),
+                ),
+                ListTile(
+                  title: Text("Feedback",
+                    style: TextStyle(
+                      fontSize: 20.0,
+                    ),
+                  ),
+                  leading: Icon(Icons.feedback,
+                    color: Colors.blue,
+                  ),
+                ),
+                ListTile(
+                  title: Text("logout",
+                    style: TextStyle(
+                      fontSize: 20.0,
+                    ),
+                  ),
+                  leading: Icon(Icons.logout_outlined,
+                    color: Colors.blue,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
+
       ),
+
     );
   }
 }
