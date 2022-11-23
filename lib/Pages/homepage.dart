@@ -8,12 +8,24 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
   @override
   Widget build(BuildContext context) {
+    //var width=MediaQuery.of(context).size.width;
     return Container(
       child: Scaffold(
-        appBar: AppBar(
-          title: Text("Doctor Appointment System "),
+        backgroundColor: Colors.white,
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(70.0),
+          child: AppBar(
+
+            title: Text("Doco"),
+            elevation: 20.0,
+          //  centerTitle: true,
+            actions: [
+              IconButton(onPressed: (){}, icon: Icon(Icons.notifications)),
+            ],
+          ),
         ),
         drawer: Drawer(
           child: SingleChildScrollView(
@@ -129,7 +141,56 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ),
-
+        body: Container(
+          padding: EdgeInsets.all(10.0),
+          child: Column(
+            children: [
+            Flexible(
+              child: Container(
+              height: 55,
+              margin: EdgeInsets.symmetric(horizontal: 16, vertical: 5),
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.all(Radius.circular(13)),
+                boxShadow: <BoxShadow>[
+                  BoxShadow(
+                    color: Colors.blue.withOpacity(.3),
+                    blurRadius: 15,
+                    offset: Offset(5, 5),
+                  )
+                ],
+              ),
+              child: TextField(
+                decoration: InputDecoration(
+                  contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                  border: InputBorder.none,
+                  hintText: "Search",
+                //  hintStyle: TextStyles.body.subTitleColor,
+                  suffixIcon: SizedBox(
+                    width: 32,
+                    child:
+                    Icon(Icons.search, color: Colors.purple),
+                  ),
+                ),
+              ),
+          ),
+            ),
+              SizedBox(height: 15.0,),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 13.0),
+                child:Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Doctor Speciality",
+                      style: TextStyle(fontSize:20.0,fontWeight: FontWeight.w700),),
+                    Text("See all",style: TextStyle(fontSize:15.0,color: Colors.blue),)
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
 
     );
