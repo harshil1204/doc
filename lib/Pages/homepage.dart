@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(60.0),
           child: AppBar(
-
+            backgroundColor: Theme.of(context).primaryColor,
             title: Text("Doco"),
             elevation: 20.0,
           //  centerTitle: true,
@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       leading: Icon(Icons.person,
-                        color: Colors.blue,
+                        color: Theme.of(context).primaryColor,
                       ),
                     ),
                   ListTile(
@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     leading: Icon(Icons.calendar_month,
-                      color: Colors.blue,
+                      color:Theme.of(context).primaryColor,
                     ),
                   ),
                   ListTile(
@@ -80,7 +80,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     leading: Icon(Icons.monitor_heart,
-                      color: Colors.blue,
+                      color: Theme.of(context).primaryColor,
                     ),
                   ),
                   ListTile(
@@ -90,7 +90,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     leading: Icon(Icons.topic_outlined,
-                      color: Colors.blue,
+                      color: Theme.of(context).primaryColor,
                     ),
                   ),
                   ListTile(
@@ -100,7 +100,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     leading: Icon(Icons.biotech_outlined,
-                      color: Colors.blue,
+                      color: Theme.of(context).primaryColor,
                     ),
                   ),
                   ListTile(
@@ -110,7 +110,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     leading: Icon(Icons.local_hospital,
-                      color: Colors.blue,
+                      color: Theme.of(context).primaryColor,
                     ),
                   ),
                   ListTile(
@@ -120,7 +120,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     leading: Icon(Icons.fitness_center,
-                      color: Colors.blue,
+                      color: Theme.of(context).primaryColor,
                     ),
                   ),
                   ListTile(
@@ -130,7 +130,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     leading: Icon(Icons.feedback,
-                      color: Colors.blue,
+                      color: Theme.of(context).primaryColor,
                     ),
                   ),
                   ListTile(
@@ -140,7 +140,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     leading: Icon(Icons.logout_outlined,
-                      color: Colors.blue,
+                      color: Theme.of(context).primaryColor,
                     ),
                   ),
                 ],
@@ -250,7 +250,7 @@ class _HomePageState extends State<HomePage> {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20.0)
         ),
-        color: Colors.lightBlueAccent,
+        color: Theme.of(context).primaryColor,
         elevation: 10.0,
         child: Icon(i),
 
