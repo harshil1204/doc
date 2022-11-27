@@ -9,9 +9,7 @@ class SplaceScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-
       body: Container(
-
         child: AnimatedSplashScreen(
           splashIconSize: 250,
           backgroundColor: Colors.white,
@@ -31,7 +29,6 @@ class SplaceScreen extends StatelessWidget {
           ) ,
         ),
       ),
-
     );
   }
 }
