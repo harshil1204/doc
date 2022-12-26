@@ -14,7 +14,7 @@ class _SingUpState extends State<SingUp> {
     return Scaffold(
       body: Center(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 90),
+          padding: EdgeInsets.symmetric(horizontal: 40),
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

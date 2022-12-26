@@ -1,3 +1,4 @@
+import 'package:doc/Pages/signup.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: Center(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 90),
+          padding: EdgeInsets.symmetric(horizontal: 40),
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -54,20 +55,24 @@ class _LoginPageState extends State<LoginPage> {
                ),
                ),
                    color: Theme.of(context).colorScheme.secondary,
-                   onPressed: (){})
+                   onPressed: (){},
+               ),
               ],
             ),
           ),
         ),
       ),
+
       bottomNavigationBar: Container(
         padding: EdgeInsets.only(bottom: 20.0),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text("Don't have an account? "),
-        InkWell(onTap: () {},
-          child: Text("Sing Up"),
+        InkWell(onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => SingUp(),));
+        },
+          child: Text("Sing Up",style: TextStyle(color: Colors.blueAccent),),
           ),]
     )
     ),

@@ -224,7 +224,7 @@ class _HomePageState extends State<HomePage> {
               ),
               SizedBox(height: 20.0,),
               Expanded(
-                flex:2 ,
+                flex:3,
                 child:GridView.count(
                     crossAxisCount: 3,
                   children: [
@@ -237,7 +237,6 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-
             ],
           ),
         ),
@@ -246,6 +245,7 @@ class _HomePageState extends State<HomePage> {
   }
   Widget card1(IconData i){
     return  Container(
+      height: 80,width: 80,
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20.0)
