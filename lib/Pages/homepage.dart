@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'notification.dart';
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -11,7 +12,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    //var width=MediaQuery.of(context).size.width;
+    double width=MediaQuery.of(context).size.width;
+    double height=MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
@@ -21,9 +23,10 @@ class _HomePageState extends State<HomePage> {
             backgroundColor: Theme.of(context).primaryColor,
             title: Text("Doco"),
             elevation: 20.0,
-          //  centerTitle: true,
             actions: [
-              IconButton(onPressed: (){}, icon: Icon(Icons.notifications)),
+              IconButton(onPressed: (){
+               Navigator.push(context,  MaterialPageRoute(builder: (context) => Notification1(),));
+              }, icon: Icon(Icons.notifications)),
             ],
           ),
         ),
@@ -245,7 +248,6 @@ class _HomePageState extends State<HomePage> {
   }
   Widget card1(IconData i){
     return  Container(
-      height: 80,width: 80,
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20.0)

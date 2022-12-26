@@ -2,6 +2,8 @@ import 'package:doc/Pages/signup.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'homepage.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -15,7 +17,6 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     double width=MediaQuery.of(context).size.width;
     double height=MediaQuery.of(context).size.height;
-
     return Scaffold(
       body: Center(
         child: Container(
@@ -28,11 +29,11 @@ class _LoginPageState extends State<LoginPage> {
                   radius: 40.0,
                   child: Icon(Icons.person ,size: 40.0),
                 ),
-                SizedBox(height: height*0.05,),
+                SizedBox(height: height*0.07,),
                 Text("Login",style: TextStyle(
                   fontSize: 40.00
                 )),
-                SizedBox(height: 30.00,),
+                SizedBox(height: height*0.03,),
                 TextField(
                   decoration: InputDecoration(
                       prefixIcon: Icon(Icons.person),
@@ -40,7 +41,7 @@ class _LoginPageState extends State<LoginPage> {
                     labelText: "Enter E-mail",
                   ),
                 ),
-                 SizedBox(height: 20.00,),
+                 SizedBox(height: height*0.03,),
                 TextField(
                   obscureText: true,
                   decoration: InputDecoration(
@@ -49,13 +50,21 @@ class _LoginPageState extends State<LoginPage> {
                     labelText: "Enter Password",
                   ),
                 ),
-                SizedBox(height: 20.0),
+                SizedBox(height: height*0.01),
+                InkWell(
+                  onTap: (){},
+                    child: Text("Forget password?",style: TextStyle(color: Colors.blueAccent,fontSize: 16.0),
+                    ),
+                ),
+                SizedBox(height: height*0.04),
                CupertinoButton(child: Text("Login" ,style: TextStyle(
                  fontSize: 20.0
                ),
                ),
                    color: Theme.of(context).colorScheme.secondary,
-                   onPressed: (){},
+                   onPressed: (){
+                 Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(),));
+                   },
                ),
               ],
             ),
