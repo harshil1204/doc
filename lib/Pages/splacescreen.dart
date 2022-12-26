@@ -34,7 +34,7 @@ class _SplaceScreenState extends State<SplaceScreen> {
     );
     listContentConfig.add(
       const ContentConfig(
-        title: "RULER",
+       // title: "RULER",
         styleDescription: TextStyle(fontSize: 40.0),
         description:"Let's Start living healthy and well with us right now!",
         pathImage: "image/splace/good.png",
