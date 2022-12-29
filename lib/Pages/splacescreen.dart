@@ -28,7 +28,7 @@ class _SplaceScreenState extends State<SplaceScreen> {
        //title: "PENCIL",
         description: "Health check & Consultations easily anywhere anytime",
         styleDescription: TextStyle(fontSize: 40.0),
-        pathImage:  "image/splace/s2.JPG",
+        pathImage:  "image/splace/good.png",
         backgroundColor: Color(0xff203152),
       ),
     );

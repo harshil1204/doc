@@ -1,18 +1,14 @@
 import 'package:doc/Pages/signup.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'homepage.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
-
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
-
 class _LoginPageState extends State<LoginPage> {
-
   @override
   Widget build(BuildContext context) {
     double width=MediaQuery.of(context).size.width;
@@ -35,6 +31,7 @@ class _LoginPageState extends State<LoginPage> {
                 )),
                 SizedBox(height: height*0.03,),
                 TextField(
+                  autofocus: false,
                   decoration: InputDecoration(
                       prefixIcon: Icon(Icons.person),
                     border: OutlineInputBorder(borderRadius:BorderRadius.circular(50.0) ),
@@ -43,6 +40,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                  SizedBox(height: height*0.03,),
                 TextField(
+                  autofocus: false,
                   obscureText: true,
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.keyboard),

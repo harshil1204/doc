@@ -25,6 +25,7 @@ class _SingUpState extends State<SingUp> {
                 ),
                 SizedBox(height: 40.0),
                 TextField(
+                  autofocus: false,
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.person),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
@@ -33,6 +34,7 @@ class _SingUpState extends State<SingUp> {
                 ),
                 SizedBox(height: 20.0),
                 TextField(
+                  autofocus: false,
                   obscureText: true,
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.keyboard),
@@ -43,6 +45,7 @@ class _SingUpState extends State<SingUp> {
                 ),
                 SizedBox(height: 20,),
                 TextField(
+                  autofocus: false,
                   obscureText: true,
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.key),

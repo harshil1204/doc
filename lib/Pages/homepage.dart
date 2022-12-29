@@ -155,38 +155,36 @@ class _HomePageState extends State<HomePage> {
           padding: EdgeInsets.all(10.0),
           child: Column(
             children: [
-            Flexible(
-              flex: 1,
-              child: Container(
-              height: 55,
-              margin: EdgeInsets.symmetric(horizontal: 16, vertical: 5),
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(13)),
-                boxShadow: <BoxShadow>[
-                  BoxShadow(
-                    color: Colors.blue.withOpacity(.3),
-                    blurRadius: 15,
-                    offset: Offset(5, 5),
-                  )
-                ],
-              ),
-              child: TextField(
-                decoration: InputDecoration(
-                  contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                  border: InputBorder.none,
-                  hintText: "Search",
-                //  hintStyle: TextStyles.body.subTitleColor,
-                  suffixIcon: SizedBox(
-                    width: 32,
-                    child:
-                    Icon(Icons.search, color: Colors.purple),
-                  ),
+            Container(
+            height: 55,
+            margin: EdgeInsets.symmetric(horizontal: 16, vertical: 5),
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.all(Radius.circular(13)),
+              boxShadow: <BoxShadow>[
+                BoxShadow(
+                  color: Colors.blue.withOpacity(.3),
+                  blurRadius: 15,
+                  offset: Offset(5, 5),
+                )
+              ],
+            ),
+            child: TextField(
+              autofocus: false,
+              decoration: InputDecoration(
+                contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                border: InputBorder.none,
+                hintText: "Search",
+              //  hintStyle: TextStyles.body.subTitleColor,
+                suffixIcon: SizedBox(
+                  width: 32,
+                  child:
+                  Icon(Icons.search, color: Colors.purple),
                 ),
               ),
-          ),
             ),
+          ),
               SizedBox(height: 15.0,),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 13.0),
